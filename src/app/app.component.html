@@ -1,0 +1,58 @@
+<hr><app-pipes></app-pipes><br><hr>
+<app-shoppingcart></app-shoppingcart><hr><br>
+<app-product></app-product><hr><br>
+<app-change-username-auto></app-change-username-auto>
+<br><hr>
+<app-sms-app></app-sms-app>
+<br><hr>
+<app-password></app-password>
+<br><hr>
+<app-user-register></app-user-register>
+<br><hr>
+<app-auth-user></app-auth-user><hr><br>
+<!-- this is webpage {{title}} -->
+<!-- <hello1></hello1> -->
+
+<!-- <h2>{{message}}</h2> -->
+
+<!-- <button (click)="update(msg: 'msg')">one</button> -->
+
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>sn</th>
+            <th>image</th>
+            <th>name</th>
+            <th>price</th>
+            <th>quandity</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+<!-- 
+    <tr>
+        <td>{{product.sn}}</td>
+        <td><img [src]="product.image" width="150px" height="150px"></td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td><span style="font-size:55px" (click)="increment()">-</span>{{product.quand}} <span style="font-size:65px" (click)="deincrement()">+</span></td>
+        <td>{{product.price * product.quand}}</td>
+    </tr>
+ -->
+<tr *ngFor="let product of products">
+    <td>{{product.sn}}</td>
+    <td><img [src]="product.image" width="150px" height="150px"></td>
+    <td>{{product.name }}</td>
+    <td>{{product.price  | currency}} </td>
+    <td><span style="font-size:55px" (click)="increment(product.sn)">+</span>{{product.quand}} <span style="font-size:65px" (click)="deincrement(product.sn)">-</span></td>
+    <td>{{product.price * product.quand}}</td>
+    
+</tr>
+<tr>
+    <td colspan="4"></td>
+    <td>Grand Total</td>
+    <td>{{totalsall() | currency}}</td>
+</tr>
+</table>
+
+

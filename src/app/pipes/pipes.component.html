@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card shadow-lg">
+                <div class="card-header">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            ID: {{employee.sno | uppercase}}
+                        </li>
+                        <li class="list-group-item">
+                            ID: {{employee.name | uppercase}}
+                        </li>
+                        <li class="list-group-item">
+                            ID: {{employee.age}}
+                        </li>
+                        <li class="list-group-item">
+                            ID: {{employee.desiginaton}}
+                        </li>
+                        <li class="list-group-item">
+                            ID: {{employee.sno | uppercase}}
+                        </li>
+
+                        <li class="list-group-item">
+                            ID: {{employee.doj | date : 'MMM/dd/yyyy'}}
+                        </li>
+                        
+                        <li class="list-group-item">
+                            ID: {{employee.salary | currency : 'INR' }}
+                        </li>
+
+                        
+                        <li class="list-group-item">
+                           json : <pre>{{employee | json}}</pre>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

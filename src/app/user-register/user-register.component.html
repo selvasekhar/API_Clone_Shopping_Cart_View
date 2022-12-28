@@ -1,0 +1,45 @@
+<hr>
+<pre>{{user | json  }}</pre>
+<div class="container">
+    <div class="row">
+        <div class="card">
+            <div class="card-header">
+                <form (submit)="submitbtn()">
+                    <div class="mb-2">
+                        <input type="text" class="form-control" placeholder="Name" [(ngModel)]="user.name" name="name">
+                    </div>
+
+                    <div class="mb-2">
+                        <input type="email" placeholder="email" [(ngModel)]="user.email" name="email">
+                    </div>
+
+                    <div class="mb-2">
+                        <input type="text"  [(ngModel)]="user.password" name="password">
+                    </div>
+
+                    <div class="mb-2">
+                        <select [(ngModel)]="user.desiginaton" name="desiginaton">
+                            <option value="">Select</option>
+                            <option value="softwareenginer">softwareenginer</option>
+                            <option value="Sr.softwareenginer">Sr.softwareenginer</option>
+                            <option value="Techlead">Techlead</option>
+                            <option value="projectmanager">projectmanager</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-2">
+                        <textarea placeholder="content" [(ngModel)]="user.bio" name="bio" ></textarea>
+                    </div>
+                    <div class="mb-2">
+                        <input type="checkbox" class="form-control" placeholder="Name" [(ngModel)]="user.terms" name="terms">
+                    </div>
+                    <div class="mb-2">
+                        <input type="submit" class="form-control" placeholder="Name" value="Register">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div><hr>

@@ -1,0 +1,6 @@
+<h2 *ngIf="!logfunction">Welcome Selvasekar </h2>
+<h2 *ngIf="logfunction">Logout</h2>
+
+
+<button *ngIf="!logfunction" (click)="login()">Login</button>
+<button *ngIf="logfunction" (click)="logout()">Logout</button>
